@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first1</title>
+    <style>
+        body{
+            background-color:rebeccapurple;
+            margin:0;
+        }
+        .Main{
+            width:100vw;
+            height:100vh;
+            background-color:white;
+            transition:all 1s ease-in-out;
+        }
+        .box{
+            width:20vw;
+            height: 40vh;
+            font-size:150px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border-radius:30px;
+            color: aliceblue;
+        }
+        .sub1{
+            background-color: red;
+            position: absolute;
+            top:25vh;
+            left:4vw;
+        }
+        .sub2{
+            background-color:green;
+            position:absolute;
+            top:30vh;
+            left:28vw;
+        }
+        .sub3{
+            background-color:rgb(53, 53, 196);
+            position:absolute;
+            top:25vh;
+            left:52vw;
+        }
+        .sub4{
+            background-color:yellow;
+            position:absolute;
+            top:30vh;
+            left:76vw;
+            transform:rotate(-25deg);
+
+        }
+        .Main:hover .sub1{
+               border: 10px  solid red;
+               background-color: white;
+               color: red;
+               top:30vh;
+               transform:rotate(25deg);
+
+        }
+        .Main:hover .sub3{
+               border:10px solid rgb(68, 68, 170);
+               border-color: rgb(98, 98, 216);
+               background-color: white;
+               color:rgb(61, 61, 136);
+               top:30vh;
+               transform:all 1s ease-in-out;
+               transform:rotate(25deg);
+
+        }
+
+        .Main:hover .sub2{
+               border: 10px solid green;
+               background-color: white;
+               color: green;
+               top:30vh;
+               transform:rotate(-25deg);
+        }
+
+        .Main:hover .sub4{
+               border: 10px solid yellow;
+               background-color: white;
+               color:yellow;
+               top:30vh;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="Main">
+    <div class="box sub1">
+     Z
+    </div>
+    <div class="box sub2">
+      O
+    </div>
+    <div class="box sub3">
+      H
+    </div>
+    <div class="box sub4">
+     O
+    </div>
+</div>
+    
+</body>
+</html>

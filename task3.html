@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loginform</title>
+    <style>
+        .body{
+            margin:0;
+        }
+        .main{
+            width:100vw;
+            height: 100vh;
+            background-color: black;
+            position:relative;
+        }
+        .sub1{
+            width:30vw;
+            height:70vh;
+            background-color: blanchedalmond;
+            position:absolute;
+            top:10vh;
+            left:2vw;
+            border-radius:50px;
+        }
+        .sub2{
+            width:30vw;
+            height:70vh;
+            background-color:white;
+            position:absolute;
+            top:10vh;
+            right:30vw;
+            display:flex;
+            flex-direction: column;
+            justify-content:center ;
+            align-items: center;
+            font-size: x-large;
+            border-radius: 50px;
+            color: black;
+        }
+        .sub2 form{
+            display:flex;
+            flex-direction: column ;
+            align-items: center;
+        }
+        input{
+            width:25vw;
+            height:5vh;
+            margin-bottom: 3vh;
+        }
+        button{
+            width: 10vw;
+            height: 4vh;
+            background-color:dodgerblue;
+            color: black;
+            font-size: medium;
+        }
+        ::placeholder{
+            font-size:medium;
+            color:black;
+            padding-left:20px;
+        }
+        .sub1 img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sub1">
+         <img src="https://play-lh.googleusercontent.com/UKZZnii1Rksv7KsJg6ViIRW5vcEl6aww-tPG2C31kSOIYiIUB9C941NLUQR1kghi92HAqPe4d6AleBTToCRHrA=w526-h296-rw" alt="">
+        </div>
+        <div class="sub2">
+          <h1>Login form</h1>
+          <form>
+            <input type="name" placeholder="enter your name">
+            <br>
+            <input type="number" placeholder="enter number">
+            <br>
+            <input type="email" placeholder="enter your email">
+            <br>
+            <button>sign in</button>
+          </form>
+        </div>
+        <form>
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            margin:0;
+        }
+        .main1{
+            width:100vw;
+            height: 10vh;
+            background-color:rgb(207, 93, 169);
+            position: relative;
+        }
+        .main11{
+            position: absolute;
+            top:50%;
+            right:70%;
+            font-size: large;
+            color:white;
+            transform: translate(-50%,-50%);
+        }
+         h1{
+            margin:0;
+        }
+        .main2{
+            width:100vw;
+            height:80vh;
+            position:relative;
+        }
+        .main21{
+              position:absolute;
+              top:100px;
+              left:100px;
+              color:purple;
+              font:xx-large;
+        }
+        .main22{
+            position:absolute;
+            left:100px;
+            top:300px;
+        }
+        #img{
+            width:100%;
+            height:100%;
+        }
+        .main23{
+            position:absolute;
+            top:50px;
+            right:150px;
+        }
+        .main24{
+            position:absolute;
+            top:200px;
+            right:150px;
+            color:purple;
+            display:none;
+        }
+        .main23 img{
+            height:400px;
+            width:400px;
+            border-radius:200px;
+        }
+        .main3{
+            width:100vw;
+            height:10vh;
+            background-color:rgb(155, 41, 117);
+        }
+    </style>
+</head>
+<body>
+    <div class="main1">
+      <div class="main11">
+        <h1>kannika</h1>
+        </div>
+    </div>
+    <div class="main2">
+        <img src="https://t3.ftcdn.net/jpg/04/26/45/02/360_F_426450202_5eJQ0xKMGyRfOkAMmV15ePwlqAFrPoAL.jpg" alt="" id="img">
+        <div class="main21">
+            <h1 id="h1">Hi there,</h1>
+            <br>  
+            <h1 id="h2">This is kannika</h1>
+            <br>
+            <h1 id="h3">Graduating Student</h1>
+            <br>
+        </div>
+        <div class="main22">
+            <button id="b"><b>About</b></button>
+        </div>
+        <div class="main23" id="visible">
+            <img src="https://thumbs.dreamstime.com/b/beautiful-black-girl-5438761.jpg" alt="">
+        </div>
+        <div class="main24" id="hidden">
+            <h1>This is hidden</h1>
+            <h1>appear only when event occurs</h1>
+
+        </div>
+    </div>
+    <div class="main3">
+
+    </div>
+    <script >
+        document.getElementById("b").onclick=function(){
+            document.getElementById("h1").innerHTML="Electrical and Electronics"
+            document.getElementById("h2").innerHTML="2ND Year"
+            document.getElementById("h3").innerHTML="Anna University"
+            document.getElementById("visible").style.display="none"
+            document.getElementById("hidden").style.display="block"
+            document.getElementById("hidden").style.color="black"
+
+        }
+
+    </script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+        }
+        #container{
+            width:25vw;
+            height:40vh;
+            background-color:aliceblue;
+            border: 20px;
+            border-color:palevioletred;
+            border-radius:10px;
+            position:relative;
+            top:35vh;
+            left:40vw;
+        }
+        #texttospeech{
+            width: 90%;
+            height: 20vh;
+            position:absolute ;
+            top:10vh;
+            left:10px;
+        }
+        #container button{
+            position: absolute;
+            top:32vh;
+            left:100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+      <h1>Text to Speech</h1>
+      <textarea id="texttospeech" placeholder="enter text....."></textarea><br>
+      <button onclick="speaktext()" >speak</button>
+    </div>
+    <script>
+        var speech= new SpeechSynthesisUtterance();
+        function speaktext(){
+            var speakspeech=document.getElementById("texttospeech").value;
+            if(speakspeech.trim() !== " "){
+               speech.text=speakspeech;
+               speech.rate=1;
+               speech.volume=10;
+               speech.pitch=2;
+               window.speechSynthesis.speak(speech);
+            }
+            else{
+                alert("please enter some text");
+            }
+        }
+    </script>
+</body>
+</html>

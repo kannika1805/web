@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            background-color:white;
+        }
+        form{
+             width:25vw;
+             height:50vh;
+             background-color:rgba(187, 14, 150, 0.479);
+             border-radius:10px;
+             position:relative;
+             top:20vh;
+             left:40vw;
+        }
+        #na{
+          position:absolute;
+          left:50px;
+        }
+        #num{
+          position:absolute;
+          left:50px;
+        }
+        #mail{
+          position:absolute;
+          left:50px;
+        }
+        #sub{
+          position: absolute;
+          left:52px;
+        }
+        label{
+          font-size:large;
+          color:black;
+          position: absolute;
+          left:30px;
+
+        }
+        h1{
+          left:50px;
+        }
+    </style>
+</head>
+<!-- form validation -->
+<body>
+    <form onsubmit="return submitform()">
+        <h1>Form</h1>
+        <label for="na">Name</label>
+        <!-- for is used to specify the id.if we click the input box it will be higlighted -->
+        <br>
+        <input type="text" id="na" placeholder="enter name">
+        <br>
+        <span id="sp1" style="color:red;"></span>
+        <br>
+        <label for="num">Number</label>
+        <br>
+        <input type="number" id="num" placeholder="enter number">
+        <br>
+        <span id="sp2" style="color:red;"></span>
+        <br>
+        <label for="mail">Email</label>
+        <br>
+        <input type="email" id="mail" placeholder="enter mail">
+        <br>
+        <span id="sp3" style="color:red ;"></span>
+        <br>
+        <br>
+        <input type="submit" id="sub">
+    </form>
+    <script>
+        function submitform(){
+          let name =document.getElementById("na").value;
+          let num=document.getElementById("num").value;
+          let mail=document.getElementById("mail").value;
+          if(name==""){
+            document.getElementById("sp1").innerHTML="Kindly enter name";
+            return false;
+          }
+          else{
+            document.getElementById("sp1").innerHTML="";
+          }
+          if(num==""){
+             document.getElementById("sp2").innerHTML="Kindly enter number";
+             return false;S
+          }
+          else if(isNaN(num)){
+            document.getElementById("sp2").innerHTML="Kindly enter valid number";
+            return false;
+          }
+         else{
+            document.getElementById("sp2").innerHTML="";
+          }
+          if(mail==""){
+            document.getElementById("sp3").innerHTML="Kindly enter email ";
+            return false;
+          }
+          else{
+            document.getElementById("sp3").innerHTML="";
+          }
+          alert("form is submitted");
+          return true;
+        }
+    </script>
+</body>
+</html>

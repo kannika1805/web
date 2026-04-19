@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  onsubmit="return SetValue()">
+        <input type="text" placeholder="enter name" id="na">
+        <br>
+        <input type="number" placeholder="enter number" id="nu">
+        <br>
+        <input type="email" placeholder="entermail" id="ma">
+        <br>
+        <input type="submit">
+    </form>
+    <form onclick=" return GetValue()">
+       <input type="search" id="se">
+       <input type="submit">
+    </form>
+    <span id="dat"></span>
+<script>
+    function SetValue(){
+        let name=document.getElementById("na").value;
+        let num=document.getElementById("nu").value;
+        let mail=document.getElementById("ma").value;
+        localStorage.setItem("UserName",name);
+        localStorage.setItem("UserNumber",num);
+        localStorage.setItem("UserMail",mail);
+        console.log("success");
+        alert("submitted");
+        return true;
+ }
+ function GetValue(){
+    let search=document.getElementById("se").value;
+    let data=localStorage.getItem(search);
+    document.getElementById("dat").innerHTML=data;
+    alert("got");
+    return true;
+ }
+</script>
+</body>
+</html>
